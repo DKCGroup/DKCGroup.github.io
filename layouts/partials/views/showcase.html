@@ -1,0 +1,77 @@
+{{ $item := .item }}
+{{ $widget := .page }}
+{{ $index := .index }}
+
+{{/* 解析 $do_link 逻辑，决定是否添加超链接 */}}
+{{ $do_link := false }}
+{{ if or $item.Params.external_link $item.Content }}
+  {{ $do_link = true }}
+{{ end }}
+
+{{ $link := $item.Params.external_link | default $item.RelPermalink }}
+{{ $target := .target }}
+
+{{/* 获取 summary */}}
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+  {{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ else if $item.Params.abstract }}
+  {{ $summary = $item.Params.abstract | markdownify | emojify }}
+{{ else if $item.Summary }}
+  {{ $summary = $item.Summary }}
+{{ end }}
+
+{{/* 解决 flip_alt_rows 报错 */}}
+{{ $flip_alt_rows := false }}
+{{ if isset $widget "design" }}
+  {{ if isset $widget.design "flip_alt_rows" }}
+    {{ $flip_alt_rows = $widget.design.flip_alt_rows }}
+  {{ end }}
+{{ end }}
+
+{{ $order := "" }}
+{{ if and ($flip_alt_rows | default true) (not (modBool $index 2)) }}
+  {{ $order = "order-md-2" }}
+{{ end }}
+
+<div class="col-lg-12 mb-5 view-showcase">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-6">
+      <div class="section-subheading article-title mb-0 mt-0">
+        {{/* 只有当 $do_link 为 true 时，才包裹 <a> 标签 */}}
+        {{- if $do_link }}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ end -}}
+        {{ $item.Title | markdownify | emojify }}
+        {{- if $do_link }}</a>{{ end -}}
+      </div>
+
+      {{ with $summary }}
+      <div class="article-style">
+        {{ . }}
+      </div>
+      {{ end }}
+
+      <div class="btn-links">
+        {{ partial "page_links" (dict "page" $item "is_list" 0) }}
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 order-first {{$order}}">
+      {{/* ✅ 让 Hugo 获取 `featured.jpg` 图片 */}}
+      {{ $image := $item.Resources.GetMatch "featured.jpg" }}
+
+      {{/* ✅ 如果 $image 为空，使用默认图片 */}}
+      {{ if not $image }}
+        {{ $image = "/images/research/default.jpg" }}
+      {{ else }}
+        {{ $image = $image.RelPermalink }}
+      {{ end }}
+
+      {{/* 只有当 $do_link 为 true 时，才包裹 <a> 标签 */}}
+      {{ if $do_link }}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ end }}
+        <img src="{{ $image }}" height="auto" width="540"
+            alt="{{ $item.Title }}" loading="lazy" style="width: 540px; height: auto; object-fit: cover;">
+      {{ if $do_link }}</a>{{ end }}
+
+    </div>
+  </div>
+</div>

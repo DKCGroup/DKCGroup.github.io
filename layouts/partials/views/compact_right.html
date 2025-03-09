@@ -1,0 +1,100 @@
+{{ $item := .item }}
+
+{{/* Dynamic view adjusts to content type. */}}
+{{ $show_authors_only := false }}
+{{ if eq $item.Type "event" }}
+  {{ $show_authors_only = true }}
+{{ else if eq $item.Type "publication" }}
+  {{ $show_authors_only = true }}
+{{ else if eq $item.Type "project" }}
+  {{ $show_authors_only = true }}
+{{ end }}
+
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+
+{{/* Get summary. */}}
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+  {{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ else if $item.Params.abstract }}
+  {{ $summary = $item.Params.abstract | markdownify | emojify | truncate (site.Params.abstract_length | default 135) }}
+{{ else if $item.Summary }}
+  {{ $summary = $item.Summary }}
+{{ end }}
+
+<div class="media stream-item view-compact small-font" style="display: flex; align-items: center;">
+  <!-- 获取图片资源 -->
+  {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+  
+  <!-- 如果有图片，保留空间 -->
+  {{ if $resource }}
+    <div class="media-left" style="flex: 0 0 200px; text-align: center;">
+      {{ with $resource }}
+        {{ $image := .Resize "200x" }}
+        {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+        <img src="{{ $image.RelPermalink }}" height="auto" width="200"
+            alt="{{ $item.Title }}" loading="lazy" class="article-img">
+      {{ end }}
+    </div>
+  {{ else }}
+    <!-- 如果没有图片，留出 200px 的空间 -->
+    <div class="media-left" style="flex: 0 0 200px;"></div>
+  {{ end }}
+
+  <div class="media-body" style="flex: 1;">
+
+    <!-- 文章标题 -->
+    <div class="section-subheading article-title mb-0 mt-0">
+      <span class="small-font"><strong>{{ $item.Title }}</strong></span>
+    </div>
+
+    <!-- 显示 publication，字体颜色为浅灰色 -->
+    {{ if $item.Params.publication }}
+      <div class="publication small-font" style="color: gray;">
+        {{ $item.Params.publication | markdownify }}
+      </div>
+    {{ end }}
+
+    <!-- 显示摘要 -->
+    {{ with $summary }}
+    <div class="article-style small-font">
+      {{.}}
+    </div>
+    {{ end }}
+
+    <!-- 作者部分，字体颜色浅灰色，并加粗 "Kaichen Dong" 和 "K. Dong" -->
+    {{ if $item.Params.authors }}
+      <div class="article-authors small-font" style="color: gray;">
+        {{ range $index, $author := $item.Params.authors }}
+          {{- if $index }}, {{ end }}
+          {{- if or (eq $author "Kaichen Dong") (eq $author "K. Dong") }}
+            <strong>{{ $author }}</strong>
+          {{- else }}
+            {{ $author }}
+          {{- end }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <div class="stream-meta article-metadata small-font">
+      {{ if eq $item.Type "event" }}
+      <div>
+        <span>
+          {{ partial "functions/get_event_dates" $item }}
+        </span>
+        {{ with $item.Params.location }}
+        <span class="middot-divider"></span>
+        <span>{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+    {{ if $has_attachments }}
+    <div class="btn-links small-font">
+      <span>{{ partial "page_links" (dict "page" $item "is_list" 1) }}</span>
+    </div>
+    {{ end }}
+
+  </div>
+</div> 

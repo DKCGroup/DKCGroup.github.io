@@ -1,0 +1,70 @@
+{{ $item := .item }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem; font-size: 14px;">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  {{/* APA Style */}}
+  {{ if eq (site.Params.publications.citation_style | default "apa") "apa" }}
+
+  <!-- 移除作者超链接，并设置字体颜色 -->
+  <span class="article-metadata li-cite-author" style="color: gray;">
+    {{ range $index, $author := $item.Params.authors }}
+      {{- if $index }}, {{ end }}
+      {{- if or (eq $author "Kaichen Dong") (eq $author "K. Dong") }}
+        <strong>{{ $author }}</strong>
+      {{- else }}
+        {{ $author }}
+      {{- end }}
+    {{ end }}
+  </span>
+  ({{- $item.Date.Format "2006" -}}).
+
+  <!-- 移除文章标题的超链接，设置字体大小 -->
+  <span style="font-weight: bold;">{{ $item.Title }}</span>.
+
+  <span style="color: gray;">
+    {{ if $item.Params.publication_short }}
+      {{- $item.Params.publication_short | markdownify -}}.
+    {{ else if $item.Params.publication }}
+      {{- $item.Params.publication | markdownify -}}.
+    {{ end }}
+  </span>
+
+  <p>{{ partial "page_links" (dict "page" $item "is_list" 1) }}</p>
+
+  {{/* MLA Style */}}
+  {{ else }}
+
+  <!-- 移除作者超链接，并设置字体颜色 -->
+  <span class="article-metadata li-cite-author" style="color: gray;">
+    {{ range $index, $author := $item.Params.authors }}
+      {{- if $index }}, {{ end }}
+      {{- if or (eq $author "Kaichen Dong") (eq $author "K. Dong") }}
+        <strong>{{ $author }}</strong>
+      {{- else }}
+        {{ $author }}
+      {{- end }}
+    {{ end }}
+  </span>.
+
+  <!-- 移除文章标题的超链接，设置字体大小 -->
+  <span style="font-weight: bold;">{{ $item.Title }}</span>.
+
+  <span style="color: gray;">
+    {{ if $item.Params.publication_short }}
+      {{- $item.Params.publication_short | markdownify -}},
+    {{ else if $item.Params.publication }}
+      {{- $item.Params.publication | markdownify -}},
+    {{ end }}
+  </span>
+  {{- $item.Date.Format "2006" -}}.
+
+  {{ if $has_attachments }}
+  <div class="btn-links">
+    {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+  </div>
+  {{ end }}
+
+  {{ end }}
+</div>

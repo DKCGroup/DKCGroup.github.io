@@ -1,0 +1,114 @@
+// Make page header alignment consistent with widget page header alignment
+.universal-wrapper h1 {
+  text-align: center;
+  font-size: 18px; // 调小 H1 标题的字体大小
+}
+
+// Center the CTA shortcode button
+.cta-group {
+  justify-content: center;
+}
+
+// 只加粗导航栏中的链接文字
+nav ul li a {
+  font-weight: bold;
+  font-size: 14px; // 适当调整导航栏字体大小
+}
+
+// 修改整个网页正文的字体大小
+body {
+  font-size: 14px; // 调小网页正文的字体大小
+  line-height: 1.6;
+}
+
+// 修改文章内容的字体大小
+.article-style, .content, p {
+  font-size: 14px; // 文章段落字体大小
+}
+
+// 调整标题字体
+h1 {
+  font-weight: bold;
+  font-size: 18px; // 调大 H1 标题
+}
+
+h2 {
+  font-size: 16px; // 调大 H2 标题
+}
+
+h3 {
+  font-size: 14px; // 调大 H3 标题
+}
+
+// 让表格内容字体变小
+table {
+  font-size: 12px;
+}
+
+// 让侧边栏文本字体变小
+.sidebar {
+  font-size: 13px;
+}
+
+// 隐藏不必要的元素
+.hidden {
+  display: none;
+}
+/* 缩小 Latest News 区块的字体大小 */
+.small-news-text .article-title {
+  font-size: 14px !important;  /* ✅ 文章标题变小 */
+}
+
+.small-news-text .article-style {
+  font-size: 12px !important;  /* ✅ 文章摘要变小 */
+}
+
+/* 缩小 Latest News 图片 */
+.small-news-text img {
+  max-width: 80px !important;  /* ✅ 让图片变小 */
+  height: auto;
+}
+
+
+body {
+  font-size: 0.875rem; /* 1rem = 16px, 0.875rem = 14px */
+}
+
+.section-subheading {
+  font-size: 1.0rem; /* 1.25rem = 20px */
+}
+
+.article-style {
+  font-size: 0.875rem; /* 0.875rem = 14px */
+}
+
+.stream-meta {
+  font-size: 0.75rem; /* 0.75rem = 12px */
+}
+
+/* 调整整个网页的字体大小 */
+.small-font {
+  font-size: 14px !important; /* 调小整体字体 */
+}
+
+.small-text {
+  font-size: 14px !important;
+}
+/* 让整个 compact 视图字体更小 */
+.small-font {
+  font-size: 14px !important;
+  line-height: 1.2;
+}
+
+/* 控制图片大小 */
+.article-img {
+  max-width: 200px;
+  height: auto;
+  margin-right: 10px; /* 让图片和文字之间有点间距 */
+}
+
+/* 让整个排版更紧凑 */
+.stream-item {
+  display: flex;
+  align-items: center;
+}
