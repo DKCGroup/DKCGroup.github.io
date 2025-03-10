@@ -1,9 +1,9 @@
 ---
 # Display name
-title: KaiChen Dong
+title: Kaichen Dong
 
 # Full Name (for SEO)
-first_name: KaiChen
+first_name: Kaichen
 last_name: Dong
 weight: 100
 # Is this the primary user of the site?
@@ -58,7 +58,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: files/Kaichen Dong_updated 20241209.pdf
+    link: files/Kaichen Dong_updated 20250310.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
