@@ -9,7 +9,7 @@ address:
   postcode: '94305'
   country: China
 
-abstract: 'Lab Tour'
+abstract: 'JohnA. Rogers visited CDH '
 date: '2025-03-11T13:00:00Z'
 # date_end: '2030-06-01T15:00:00Z'
 # all_day: false
