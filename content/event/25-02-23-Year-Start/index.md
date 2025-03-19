@@ -1,5 +1,5 @@
 ---
-title: Dine together 
+title: 
 
 
 address:
