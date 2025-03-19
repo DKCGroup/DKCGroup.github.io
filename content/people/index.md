@@ -15,6 +15,7 @@ sections:
           - Administrative Assistant
           - Graduate Students
           - Undergraduates
+          - Visiting Undergraduate Student 
     design:
       show_organizations: false
       show_interests: false
