@@ -5,7 +5,7 @@ title: Tongyu Wu
 # Full name (for SEO)
 first_name: Tongyu
 last_name: Wu
-weight: 5
+weight: 11
 # Username (this should match the folder name)
 authors:
   - Tongyu Wu
