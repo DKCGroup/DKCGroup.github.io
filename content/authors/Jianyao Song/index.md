@@ -16,7 +16,7 @@ superuser: false
 # Role/position
 role: |
  Ph.D Student, started Sept. 2024<br>
- Mechanical Engineering and Automation, Northeastern University.
+ School of Mechanical Engineering and Automation, Northeastern University.
  
 education:
   courses:

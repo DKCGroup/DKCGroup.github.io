@@ -16,7 +16,7 @@ superuser: false
 # Role/position
 role: |
  Master Student, started Sept. 2023<br>
- Beijing Information Science & Technology University.
+ School of Automation,Beijing Information Science & Technology University.
 
 education:
   courses:

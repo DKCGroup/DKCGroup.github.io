@@ -16,6 +16,7 @@ superuser: false
 # Role/position
 role: |
  Ph.D Student, started Sept. 2024<br>
+ Bachelor of double degree in Basic Math and Physics & Microelectronic Engineering.<br>
  Weiyang College, Tsinghua University.
 
 education:
