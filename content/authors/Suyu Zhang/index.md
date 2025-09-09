@@ -5,7 +5,7 @@ title: Suyu Zhang
 # Full name (for SEO)
 first_name: Suyu
 last_name: Zhang
-weight: 12
+weight: 14
 # Username (this should match the folder name)
 authors:
   - Suyu Zhang

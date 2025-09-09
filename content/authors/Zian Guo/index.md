@@ -5,7 +5,7 @@ title: Zian Guo
 # Full name (for SEO)
 first_name: Zian
 last_name: Guo
-weight: 11
+weight: 13
 # Username (this should match the folder name)
 authors:
   - Zian Guo
