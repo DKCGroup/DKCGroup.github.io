@@ -1,0 +1,122 @@
+faculty:
+
+  Dong:
+    name: Kaichen Dong
+    img: dong.jpg
+    title: Associate Professor
+    link: https://www.sigs.tsinghua.edu.cn/dkc/main.htm
+    email: dkc22@sz.tsinghua.edu.cn
+
+administrative_assistants:
+
+  Yixiao Li:
+    name: Yixiao Li
+    img: li.jpg
+    email: 19975244320@163.com
+
+students: &students
+
+  xuzhe_zhao:
+    name: Xuzhe Zhao
+    img: xuzhe.jpg
+    title: "Ph.D. Student, started Sept. 2023<br/>School of Telecommunications Engineering, Xidian University<br/>Telecommunications Engineering with Honours of the first class, Heriot-Watt University."
+    email: zhao-xz23@mails.tsinghua.edu.cn
+
+  chunjiang_li:
+    name: Chunjiang Li
+    img: chunjiang.jpg
+    title: "Ph.D. Student, started Sept. 2023<br/>School of Physics, Peking University."
+    email: lcj23@mails.tsinghua.edu.cn
+
+  shujie_yang:
+    name: Shujie Yang
+    img: shujie.jpg
+    title: "Master Student, started Sept. 2023<br/>School of Mathematics and Statistics, Xi'an Jiaotong University."
+    email: yangsj23@mail.tsinghua.edu.cn
+
+  qiyue_chen:
+    name: Qiyue Chen
+    img: qiyue.jpg
+    title: "Master Student, started Sept. 2023<br/>School of Automation, Beijing Information Science & Technology University."
+    email: chenqy23@mails.tsinghua.edu.cn
+
+  xinxiang_ye:
+    name: Xinxiang Ye
+    img: xinxiang.jpg
+    title: "Ph.D. Student, started Sept. 2024<br/>Double degree in Basic Math and Physics & Microelectronic Engineering, Weiyang College, Tsinghua University."
+    email: yxx24@mails.tsinghua.edu.cn
+
+  zhiyun_wang:
+    name: Zhiyun Wang
+    img: zhiyun.jpg
+    title: "Master Student, started Sept. 2024<br/>School of Mechano-Electronic Engineering, Xidian University."
+    email: zhiyun-w24@mails.tsinghua.edu.cn
+
+  jiahao_cheng:
+    name: Jiahao Cheng
+    img: jiahao.jpg
+    title: "Master Student, started Sept. 2024<br/>Department of Mechanical Engineering, Tsinghua University."
+    email: chengjh24@mails.tsinghua.edu.cn
+
+  yuqi_zhang:
+    name: Yuqi Zhang
+    img: yuqi.jpg
+    title: "Master Student, started Sept. 2024<br/>School of Artificial Intelligence, Southeast University."
+    email: zhang-yq24@mails.tsinghua.edu.cn
+
+  jianyao_song:
+    name: Jianyao Song
+    img: jianyao.jpg
+    title: "Ph.D. Student, started Sept. 2024<br/>School of Mechanical Engineering and Automation, Northeastern University."
+    email: jy-song24@mails.tsinghua.edu.cn
+
+  ziyun_wang:
+    name: Ziyun Wang
+    img: ziyun.jpg
+    title: "Master Student, started Sept. 2025<br/>Weiyang College, Tsinghua University."
+    email: ziyun-wa21@mails.tsinghua.edu.cn
+
+  tongyu_wu:
+    name: Tongyu Wu
+    img: tongyu.png
+    title: "Master Student, started Sept. 2025<br/>Business School, Nanjing University."
+    email: wu-ty25@mails.tsinghua.edu.cn
+
+  chonkei_iong:
+    name: Chonkei Iong
+    img: junqi.jpg
+    title: "Ph.D. Student, started Sept. 2025<br/>Bachelor of Civil Engineering, Tianjin University; Master of Civil Engineering, Harbin Institute of Technology."
+    email: rjq25@mails.tsinghua.edu.cn
+
+  zian_guo:
+    name: Zian Guo
+    img: zian.jpg
+    title: "Master Student, started Sept. 2025<br/>School of Instrumentation and Optoelectronic Engineering, Beihang University."
+    email: gza25@mails.tsinghua.edu.cn
+
+  suyu_zhang:
+    name: Suyu Zhang
+    img: suyu.jpg
+    title: "Master Student, started Sept. 2025<br/>School of Mathematics and Statistics, Xi'an Jiaotong University."
+    email: zhangsuy25@mails.tsinghua.edu.cn
+
+current_students:
+  <<: *students
+
+visiting_students:
+
+  austin_yin:
+    name: Austin Yin
+    img: austin.jpg
+    title: "Visiting Undergraduate Student, started Sept. 2024<br/>Purdue University, School of Mechanical Engineering."
+    email: yin292@purdue.edu
+
+  yongzhao_li:
+    name: Yongzhao Li
+    img: yongzhao.jpg
+    title: "Visiting Undergraduate Student, started Mar. 2025<br/>Ji Luan Academy, Nanchang University."
+    email: lyz041015@email.ncu.edu.cn
+
+alumni:
+
+  

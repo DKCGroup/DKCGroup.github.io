@@ -1,0 +1,42 @@
+.brand-logo-med {
+    position: relative;
+    z-index: 10;
+    float: left;
+    display: block;
+    width: 177px;
+    height: 45px;
+    margin-right: 10px;
+    background: url(../img/logos/stanford_med.png) no-repeat 0 0;
+    background-size: auto;
+    border-right: 1px solid black;
+    text-indent: -9999px;
+    margin-right: 10px;
+}
+
+.brand-logo-sail {
+    position: relative;
+    z-index: 10;
+    float: left;
+    display: block;
+    width: 260px;
+    height: 48px;
+    background: url(../img/logos/stanford_sail.png) no-repeat 0 0;
+    background-size: auto;
+    border-right: 1px solid black;
+    text-indent: -9999px;
+    margin-right: 10px;
+}
+
+.brand-logo-lpch {
+    position: relative;
+    z-index: 10;
+    float: left;
+    display: block;
+    width: 210px;
+    height: 48px;
+    background: url(../img/logos/lpch.png) no-repeat 0 0;
+    background-size: auto;
+    border-right: 1px solid black;
+    text-indent: -9999px;
+    margin-right: 10px;
+}

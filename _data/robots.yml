@@ -1,0 +1,65 @@
+sawyers:
+
+  sawyer_1:
+    name: C3PO
+    img: c3po.jpg
+    img_alt: c3po_alt.jpg
+    title: One of the oldest members of PAIR. He is extremely polite and well-behaved.
+
+  sawyer_2:
+    name: BB-8
+    img: bb-8.jpg
+    img_alt: bb-8_alt.jpg
+    title: One of the oldest members of PAIR. He's a little rambunctuous, but means well. 
+
+  sawyer_3:
+    name: The Vision
+    img: thevision.jpg
+    img_alt: thevision_alt.jpg
+    title: A new addition to the farm. He likes to go and help the Avengers fight crime in his spare time. Thanos had better watch out.
+    
+  sawyer_4:
+    name: Bender
+    img: bender.jpg
+    img_alt: bender_alt.jpg
+    title: A new addition to the farm. He really likes beer, and can be a jerk at times.
+    
+  sawyer_5:
+    name: TARS
+    img: tars.jpg
+    img_alt: tars_alt.gif
+    title: A new addition to the farm. Designed for interstellar travel.
+
+  sawyer_6:
+    name: HAL
+    img: hal.jpg
+    img_alt: hal_alt.jpg
+    title: A new addition to the farm. Moonlights as an astronaut. You probably shouldn't trust what he says.
+    
+pandas:
+
+  panda_1:
+    name: Brainiac
+    img: brainiac.jpg
+    img_alt: brainiac_alt.jpg
+    title: A new addition to the farm. A twelfth-level intellect. Nothing can stop him, not even Superman.
+
+  panda_2:
+    name: Goddard
+    img: goddard.jpg
+    img_alt: goddard_alt.png
+    title: A new addition to the farm. He's such a good boy.
+
+
+mobile:
+
+  jr2:
+    name: JackRabbot 2
+    img: jr2.jpg
+    title: The polite pedestrian robot. 
+
+  hsr:
+    name: Toyota HSR
+    img: hsr.jpg
+    title: Courtesy of Toyota. 
+
